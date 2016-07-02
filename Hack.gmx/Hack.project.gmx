@@ -8,7 +8,9 @@
   <sprites name="sprites">
     <sprite>sprites\sprGrayBox</sprite>
     <sprite>sprites\sprRedBox</sprite>
-    <sprite>sprites\objLumberjack1</sprite>
+    <sprite>sprites\sprLumberjackFront1</sprite>
+    <sprite>sprites\sprLumberjackRight1</sprite>
+    <sprite>sprites\sprLumberjackBack1</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -16,6 +18,7 @@
     <script>scripts\scrHandleLumberjackStateTransition.gml</script>
     <script>scripts\scrHandleLumberjackWalkingState.gml</script>
     <script>scripts\scrWrapAroundScreen.gml</script>
+    <script>scripts\scrUpdateLumberjackSprite.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objLumberjack</object>
@@ -24,10 +27,11 @@
   <rooms name="rooms">
     <room>rooms\roomMain</room>
   </rooms>
-  <constants number="3">
+  <constants number="4">
     <constant name="WALKING">0</constant>
     <constant name="IDLE">1</constant>
     <constant name="TALKING">2</constant>
+    <constant name="LUMBERJACKBASEDEPTH">-1000</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
