@@ -8,11 +8,13 @@
   <sprites name="sprites">
     <sprite>sprites\sprGrayBox</sprite>
     <sprite>sprites\sprRedBox</sprite>
+    <sprite>sprites\objLumberjack1</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\objLumberjack</object>
+    <object>objects\objVillian</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomMain</room>
