@@ -40,9 +40,37 @@ maximumWalkingDistanceX = 400;
 maximumWalkingDistanceY = 300;
 
 // Probability to kill someone you are passing
-killProbability = 0.6/room_speed;
+killProbability = 0.3/room_speed;
+killCoolDownTime = 3.0*room_speed;
+alarm[1] = killCoolDownTime;
+willKill = false;
 
 marked = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Enable kills now that cool down time is over
+
+willKill = true;
 </string>
           </argument>
         </arguments>
@@ -209,15 +237,18 @@ scrUpdateDepth();
           <argument>
             <kind>1</kind>
             <string>/// Randomly murder somebody as you pass them
-
-if(distance_to_object(objLumberjack) &lt; 20.0) {
-    // Percent chance to murder if close to them
-    if(random(1.0) &lt;= killProbability) {
-        with(other) {
-            instance_change(objSack, true);
+if(willKill) {
+    if(distance_to_object(objLumberjack) &lt; 20.0) {
+        // Percent chance to murder if close to them
+        if(random(1.0) &lt;= killProbability) {
+            with(other) {
+                instance_change(objSack, true);
+            }
+            show_debug_message("Hacked!");
+            newState = WALKING;
+            willKill = false;
+            alarm[1] = killCoolDownTime;
         }
-        show_debug_message("Hacked!");
-        newState = WALKING;
     }
 }
 </string>

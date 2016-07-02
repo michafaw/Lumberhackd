@@ -33,7 +33,7 @@
   </scripts>
   <objects name="objects">
     <object>objects\objLumberjack</object>
-    <object>objects\objVillian</object>
+    <object>objects\objVillain</object>
     <object>objects\objSack</object>
     <object>objects\objTree</object>
     <object>objects\objGameControl</object>

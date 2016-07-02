@@ -32,7 +32,7 @@ destY = 60;
 movementSpeed = 5;
 state = IDLE; // current state
 newState = IDLE; // state we are transitioning into
-alarm[0] = irandom(2.0*room_speed);
+alarm[0] = irandom(1.5*room_speed);
 
 minimumIdleTime = 0.5*room_speed;
 maximumIdleTime = 2.5*room_speed;

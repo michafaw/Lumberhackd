@@ -93,6 +93,15 @@ with(objLumberjack) {
         }
     }
 }
+
+with(objVillain) {
+    if(state == IDLE) {
+        if(distance_to_object(other) &lt; 100.0) {
+            newState = WALKING;
+            show_debug_message("Lumberjack spooked!");
+        }
+    }
+}
 </string>
           </argument>
         </arguments>
