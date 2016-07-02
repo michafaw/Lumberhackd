@@ -19,6 +19,11 @@
   <rooms name="rooms">
     <room>rooms\roomMain</room>
   </rooms>
+  <constants number="3">
+    <constant name="WALKING">0</constant>
+    <constant name="IDLE">1</constant>
+    <constant name="TALKING">2</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
