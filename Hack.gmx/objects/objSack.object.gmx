@@ -33,6 +33,66 @@ image_xscale = 1.0;
 speed = 0;
 
 scrUpdateDepth();
+
+// Cause lumber jacks to keep walking for x amount of time if they are near the sack
+causeAlert = true;
+alarm[1] = 0.5*room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// End alert state
+causeAlert = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Cause nearby lumberjacks to keep walking if we are sounding an alarm
+
+with(objLumberjack) {
+    if(state == IDLE) {
+        if(distance_to_object(other) &lt; 100.0) {
+            newState = WALKING;
+            show_debug_message("Lumberjack spooked!");
+        }
+    }
+}
 </string>
           </argument>
         </arguments>

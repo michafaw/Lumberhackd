@@ -36,6 +36,7 @@
     <object>objects\objVillian</object>
     <object>objects\objSack</object>
     <object>objects\objTree</object>
+    <object>objects\objGameControl</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomMain</room>

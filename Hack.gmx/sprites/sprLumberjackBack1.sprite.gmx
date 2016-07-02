@@ -3,23 +3,38 @@
   <type>0</type>
   <xorig>32</xorig>
   <yorigin>56</yorigin>
-  <colkind>2</colkind>
+  <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>17</bbox_left>
-  <bbox_right>57</bbox_right>
-  <bbox_top>9</bbox_top>
-  <bbox_bottom>57</bbox_bottom>
+  <bbox_left>12</bbox_left>
+  <bbox_right>63</bbox_right>
+  <bbox_top>7</bbox_top>
+  <bbox_bottom>70</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>64</width>
-  <height>64</height>
+  <width>69</width>
+  <height>79</height>
   <frames>
     <frame index="0">images\sprLumberjackBack1_0.png</frame>
+    <frame index="1">images\sprLumberjackBack1_1.png</frame>
+    <frame index="2">images\sprLumberjackBack1_2.png</frame>
+    <frame index="3">images\sprLumberjackBack1_3.png</frame>
+    <frame index="4">images\sprLumberjackBack1_4.png</frame>
+    <frame index="5">images\sprLumberjackBack1_5.png</frame>
+    <frame index="6">images\sprLumberjackBack1_6.png</frame>
+    <frame index="7">images\sprLumberjackBack1_7.png</frame>
+    <frame index="8">images\sprLumberjackBack1_8.png</frame>
+    <frame index="9">images\sprLumberjackBack1_9.png</frame>
+    <frame index="10">images\sprLumberjackBack1_10.png</frame>
+    <frame index="11">images\sprLumberjackBack1_11.png</frame>
+    <frame index="12">images\sprLumberjackBack1_12.png</frame>
+    <frame index="13">images\sprLumberjackBack1_13.png</frame>
+    <frame index="14">images\sprLumberjackBack1_14.png</frame>
+    <frame index="15">images\sprLumberjackBack1_15.png</frame>
   </frames>
 </sprite>

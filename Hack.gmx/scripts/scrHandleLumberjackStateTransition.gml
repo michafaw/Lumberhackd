@@ -24,8 +24,9 @@ if(state != newState) {
         MFLog("Entering walking state.");
         destX = irandom(room_width - 50) + 25;
         destY = irandom(room_height - 50) + 25;
-        movementSpeed = random(2.0) + 2.0;
-        image_speed = 20/room_speed;
+        movementSpeed = (random(100.0) + 80.0)/room_speed;
+        image_speed = 12.0*movementSpeed/room_speed; // 10.0 looks good
+        show_debug_message(string(movementSpeed) + ", " + string(image_speed));
     } else if(newState == IDLE) {
         alarm[0] = irandom(maximumIdleTime - minimumIdleTime) + minimumIdleTime;
         sprite_index = 12;

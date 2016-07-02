@@ -41,6 +41,8 @@ maximumWalkingDistanceY = 300;
 
 // Probability to kill someone you are passing
 killProbability = 0.6/room_speed;
+
+marked = false;
 </string>
           </argument>
         </arguments>
@@ -223,6 +225,31 @@ if(distance_to_object(objLumberjack) &lt; 20.0) {
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Toggle marked state
+
+marked = !marked;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -240,9 +267,11 @@ if(distance_to_object(objLumberjack) &lt; 20.0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw sprite with gray box behind
+            <string>/// Draw sprite and marker with gray box behind
 draw_sprite(sprGrayBox, 0, x, y);
 draw_self();
+if(marked)
+    draw_sprite(sprCheckMark, 0, x, y-40);;
 </string>
           </argument>
         </arguments>
