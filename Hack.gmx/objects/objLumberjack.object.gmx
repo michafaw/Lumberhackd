@@ -39,6 +39,11 @@ maximumIdleTime = 2.5*room_speed;
 
 maximumWalkingDistanceX = 400;
 maximumWalkingDistanceY = 300;
+
+// Random height and width settings
+image_xscale = random(0.2) + 0.9;
+image_yscale = random(0.2) + 0.9;
+
 </string>
           </argument>
         </arguments>
@@ -181,7 +186,7 @@ scrWrapAroundScreen();
             <kind>1</kind>
             <string>/// Update sprite &amp; depth
 scrUpdateLumberjackSprite(1);
-depth = -y + LUMBERJACKBASEDEPTH;
+scrUpdateDepth();
 </string>
           </argument>
         </arguments>

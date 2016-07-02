@@ -20,7 +20,7 @@ if(lumberjackNumber == 1) {
     }
 } else {
     if(direction < 60 || direction > 300)
-        sprite_index = sprLumberackRight1;
+        sprite_index = sprLumberjackRight1;
     else if(direction > 60 && direction < 120)
         sprite_index = sprLumberjackBack1;
     else if(direction > 120 && direction < 240)

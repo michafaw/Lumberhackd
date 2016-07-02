@@ -1,0 +1,3 @@
+/// scrUpdateDepth()
+
+depth = -y + GAMEFIELDBASEDEPTH;

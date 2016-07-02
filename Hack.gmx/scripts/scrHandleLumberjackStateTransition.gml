@@ -1,27 +1,35 @@
 /// scrHandleLumberjackStateTransition
 
 if(state != newState) {
+    // State exit functions
+    if(state == IDLE) {
+        alarm[0] = -1;
+    }
+
     // State transitions
     if(state == IDLE) {
         if(newState == WALKING) {
-            show_debug_message("Idle to walking.");
+            MFLog("Idle to walking.");
         }
     } else if(state == WALKING) {
         if(newState == IDLE) {
-            show_debug_message("Walking to idle.");
+            MFLog("Walking to idle.");
         }
     } else {
-        show_debug_message("Unhandled state transition. " + string(state) + " to " + string(newState));
+        MFLog("Unhandled state transition. " + string(state) + " to " + string(newState));
     }
     
     // State entry functions
     if(newState == WALKING) {
-        show_debug_message("Entering walking state.");
+        MFLog("Entering walking state.");
         destX = irandom(room_width - 50) + 25;
         destY = irandom(room_height - 50) + 25;
         movementSpeed = random(2.0) + 2.0;
+        image_speed = 20/room_speed;
     } else if(newState == IDLE) {
         alarm[0] = irandom(maximumIdleTime - minimumIdleTime) + minimumIdleTime;
+        sprite_index = 12;
+        image_speed = 0;
     }
     
     

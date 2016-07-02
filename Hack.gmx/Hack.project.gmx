@@ -8,21 +8,34 @@
   <sprites name="sprites">
     <sprite>sprites\sprGrayBox</sprite>
     <sprite>sprites\sprRedBox</sprite>
+    <sprite>sprites\sprLumberjackIdle1</sprite>
     <sprite>sprites\sprLumberjackFront1</sprite>
     <sprite>sprites\sprLumberjackRight1</sprite>
     <sprite>sprites\sprLumberjackBack1</sprite>
+    <sprite>sprites\sprSack</sprite>
+    <sprite>sprites\sprTree1</sprite>
+    <sprite>sprites\sprTreetop1</sprite>
+    <sprite>sprites\sprCheckMark</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scrHandleLumberjackStateTransition.gml</script>
-    <script>scripts\scrHandleLumberjackWalkingState.gml</script>
+    <scripts name="Lumberjack">
+      <script>scripts\scrHandleLumberjackStateTransition.gml</script>
+      <script>scripts\scrHandleLumberjackWalkingState.gml</script>
+      <script>scripts\scrUpdateLumberjackSprite.gml</script>
+    </scripts>
+    <scripts name="Utility">
+      <script>scripts\MFLog.gml</script>
+    </scripts>
     <script>scripts\scrWrapAroundScreen.gml</script>
-    <script>scripts\scrUpdateLumberjackSprite.gml</script>
+    <script>scripts\scrUpdateDepth.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\objLumberjack</object>
     <object>objects\objVillian</object>
+    <object>objects\objSack</object>
+    <object>objects\objTree</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomMain</room>
@@ -31,7 +44,7 @@
     <constant name="WALKING">0</constant>
     <constant name="IDLE">1</constant>
     <constant name="TALKING">2</constant>
-    <constant name="LUMBERJACKBASEDEPTH">-1000</constant>
+    <constant name="GAMEFIELDBASEDEPTH">-1000</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
