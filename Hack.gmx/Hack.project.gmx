@@ -12,6 +12,11 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scrHandleLumberjackStateTransition.gml</script>
+    <script>scripts\scrHandleLumberjackWalkingState.gml</script>
+    <script>scripts\scrWrapAroundScreen.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\objLumberjack</object>
     <object>objects\objVillian</object>

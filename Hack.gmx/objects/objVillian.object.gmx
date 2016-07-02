@@ -88,35 +88,7 @@ newState = WALKING;
           <argument>
             <kind>1</kind>
             <string>/// Handle state transitions
-if(state != newState) {
-    
-    
-    if(state == IDLE) {
-        if(newState == WALKING) {
-            show_debug_message("Idle to walking.");
-        }
-    } else if(state == WALKING) {
-        if(newState == IDLE) {
-            show_debug_message("Walking to idle.");
-        }
-    } else {
-        show_debug_message("Unhandled state transition. " + string(state) + " to " + string(newState));
-    }
-    
-    // State entry functions
-    if(newState == WALKING) {
-        show_debug_message("Entering walking state.");
-        destX = irandom(room_width - 100) + 50;
-        destY = irandom(room_height - 100) + 50;
-        movementSpeed = 3.0;
-    } else if(newState == IDLE) {
-        alarm[0] = irandom(maximumIdleTime - minimumIdleTime) + minimumIdleTime;
-    }
-    
-    
-    // Update the current state
-    state = newState;
-}
+scrHandleLumberjackStateTransition();
 </string>
           </argument>
         </arguments>
@@ -139,11 +111,7 @@ if(state != newState) {
             <kind>1</kind>
             <string>/// (WALKING) Head toward destination
 if(state == WALKING) {
-    move_towards_point(destX, destY, movementSpeed);
-    if(distance_to_point(destX, destY) &lt; movementSpeed) {
-        speed = 0;
-        newState = IDLE;
-    }
+    scrHandleLumberjackWalkingState();
 }
 </string>
           </argument>
@@ -190,14 +158,7 @@ if(state == IDLE) {
           <argument>
             <kind>1</kind>
             <string>/// Wrap around the screen if necessary
-var horizontalFudgeFactor = 20.0;
-var verticalFudgeFactor = 20.0
-if(x &gt; room_width + horizontalFudgeFactor ||
-    x &lt; 0 - horizontalFudgeFactor)
-    x = (x + room_width) % room_width;
-if(y &gt; room_height + verticalFudgeFactor ||
-    y &lt; 0 - verticalFudgeFactor)
-    y = (y + room_height) % room_height;
+scrWrapAroundScreen();
 </string>
           </argument>
         </arguments>
