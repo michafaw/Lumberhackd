@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// Set up initial game variables
 gameState = NORMALMODE;
+incorrectGuesses = 0;
 </string>
           </argument>
         </arguments>
@@ -49,12 +50,39 @@ gameState = NORMALMODE;
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>/// Change to game over if 3 incorrect guesses
+
+if(incorrectGuesses &gt;= 3) {
+    show_debug_message("Game Over - Failure - 3 wrong accusations");
+    gameState = GAMEOVER;
+    room_goto(roomGameOverFailure);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>/// Check for no lumberjacks remaining
 var lumberjacksRemaining = 0;
 with(objLumberjack) {
     lumberjacksRemaining++;
 }
-show_debug_message("Lumberjacks remaining: " + string(lumberjacksRemaining));
+MFLog("Lumberjacks remaining: " + string(lumberjacksRemaining));
 
 if(lumberjacksRemaining &lt;= 0) {
     if(gameState == NORMALMODE || gameState == ACCUSEMODE) {

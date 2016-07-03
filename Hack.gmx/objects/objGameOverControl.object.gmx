@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>/// Set up variables
+
 alarm[0] = 0.4*room_speed;
 canTap = false;
 </string>
