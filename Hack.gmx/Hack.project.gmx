@@ -29,6 +29,8 @@
     <sprite>sprites\sprLumberhackdTitle</sprite>
     <sprite>sprites\sprLargeSack</sprite>
     <sprite>sprites\sprTitleNoteText</sprite>
+    <sprite>sprites\sprStrikeOn</sprite>
+    <sprite>sprites\sprStrikeOff</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgTitle</background>
