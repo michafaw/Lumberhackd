@@ -17,7 +17,9 @@
     <sprite>sprites\sprTreetop1</sprite>
     <sprite>sprites\sprCheckMark</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bgTitle</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Lumberjack">
@@ -37,8 +39,10 @@
     <object>objects\objSack</object>
     <object>objects\objTree</object>
     <object>objects\objGameControl</object>
+    <object>objects\objTitleControl</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\roomTitle</room>
     <room>rooms\roomMain</room>
   </rooms>
   <constants number="6">
