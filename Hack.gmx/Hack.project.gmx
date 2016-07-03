@@ -41,11 +41,13 @@
   <rooms name="rooms">
     <room>rooms\roomMain</room>
   </rooms>
-  <constants number="4">
+  <constants number="6">
     <constant name="WALKING">0</constant>
     <constant name="IDLE">1</constant>
     <constant name="TALKING">2</constant>
     <constant name="GAMEFIELDBASEDEPTH">-1000</constant>
+    <constant name="PLAYING">0</constant>
+    <constant name="GAMEOVER">1</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
