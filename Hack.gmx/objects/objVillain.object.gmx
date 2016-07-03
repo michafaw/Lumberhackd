@@ -45,6 +45,8 @@ killCoolDownTime = 3.0*room_speed;
 alarm[1] = killCoolDownTime;
 willKill = false;
 
+currentTarget = noone;
+
 marked = false;
 </string>
           </argument>
@@ -100,7 +102,7 @@ if(objGameControl.gameState == ACCUSEMODE) {
             <kind>1</kind>
             <string>/// Handle end of IDLE state
 
-newState = WALKING;
+newState = choose(WALKING, STALKING);
 
 </string>
           </argument>
@@ -249,10 +251,10 @@ if(willKill) {
             with(other) {
                 instance_change(objSack, true);
             }
-            
             newState = WALKING;
             willKill = false;
             alarm[1] = killCoolDownTime;
+            currentTarget = noone
         }
     }
 }

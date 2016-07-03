@@ -62,7 +62,7 @@
     <constant name="NOSTATE">0</constant>
     <constant name="IDLE">1</constant>
     <constant name="WALKING">2</constant>
-    <constant name="TALKING">3</constant>
+    <constant name="STALKING">3</constant>
     <constant name="GAMEFIELDBASEDEPTH">-1000</constant>
     <constant name="LUMBERJACKBASEDEPTH">-3000</constant>
     <constant name="NORMALMODE">0</constant>

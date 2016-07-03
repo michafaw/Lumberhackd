@@ -30,6 +30,20 @@ if(state != newState) {
         alarm[0] = irandom(maximumIdleTime - minimumIdleTime) + minimumIdleTime;
         sprite_index = 12;
         image_speed = (random(2.0) + 9.0)/room_speed;
+    } else if(newState == STALKING) {
+        show_debug_message("Entering stalking state.");
+        if(currentTarget == noone) {
+            var lumberjackList = ds_list_create();
+            with(objLumberjack) {
+                ds_list_add(lumberjackList, self);
+            }
+            currentTarget = ds_list_find_value(lumberjackList, irandom(ds_list_size(lumberjackList)-1));
+        }
+        destX = currentTarget.x;
+        destY = currentTarget.y;
+        movementSpeed = (random(100.0) + 80.0)/room_speed;
+        image_speed = 12.0*movementSpeed/room_speed; // 10.0 looks good
+        newState = WALKING;
     }
     
     
