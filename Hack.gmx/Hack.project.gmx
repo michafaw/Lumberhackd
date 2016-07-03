@@ -9,6 +9,9 @@
     <sprite>sprites\sprGrayBox</sprite>
     <sprite>sprites\sprRedBox</sprite>
     <sprite>sprites\sprLumberjackFrontIdle1</sprite>
+    <sprite>sprites\sprLumberjackLeftIdle1</sprite>
+    <sprite>sprites\sprLumberjackRightIdle1</sprite>
+    <sprite>sprites\sprLumberjackBackIdle1</sprite>
     <sprite>sprites\sprLumberjackFront1</sprite>
     <sprite>sprites\sprLumberjackRight1</sprite>
     <sprite>sprites\sprLumberjackLeft1</sprite>
@@ -20,6 +23,8 @@
     <sprite>sprites\sprAccuseButton</sprite>
     <sprite>sprites\sprAccuseOverlay</sprite>
     <sprite>sprites\sprLumberhackdTitle</sprite>
+    <sprite>sprites\sprLargeSack</sprite>
+    <sprite>sprites\sprTitleNoteText</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgTitle</background>
@@ -51,6 +56,8 @@
     <object>objects\objAccuseButton</object>
     <object>objects\objAccuseOverlay</object>
     <object>objects\objLumberjackdTitle</object>
+    <object>objects\objLargeSack</object>
+    <object>objects\objTitleNoteText</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomTitle</room>

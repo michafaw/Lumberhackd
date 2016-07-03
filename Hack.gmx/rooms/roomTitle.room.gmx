@@ -52,7 +52,9 @@
   </views>
   <instances>
     <instance objName="objTitleControl" x="0" y="0" name="inst_B0FE05A4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objLumberjackdTitle" x="37" y="43" name="inst_357FC7BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLumberjackdTitle" x="400" y="71" name="inst_357FC7BA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objLargeSack" x="400" y="508" name="inst_762BB4C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objTitleNoteText" x="26" y="582" name="inst_3FA4429B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
