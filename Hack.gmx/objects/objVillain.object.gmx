@@ -281,8 +281,10 @@ if(willKill) {
           <argument>
             <kind>1</kind>
             <string>/// Toggle marked state if in NORMALMODE
-if(objGameControl.gameState == NORMALMODE)
+if(objGameControl.gameState == NORMALMODE) {
     marked = !marked;
+    audio_play_sound(sndClick, 1, false);
+}
 </string>
           </argument>
         </arguments>

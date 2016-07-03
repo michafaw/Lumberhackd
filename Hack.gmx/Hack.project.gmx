@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndClick</sound>
+    <sound>sound\sndWrongGuess</sound>
+    <sound>sound\musSong</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprGrayBox</sprite>
     <sprite>sprites\sprRedBox</sprite>
@@ -32,6 +36,7 @@
     <background>background\bgGameOverSuccess</background>
     <background>background\bgGameOverFailureDeaths</background>
     <background>background\bgGameOverFailureStrikes</background>
+    <background>background\bgInstructions</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -62,6 +67,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\roomTitle</room>
+    <room>rooms\roomInstructions</room>
     <room>rooms\roomMain</room>
     <room>rooms\roomGameOverSuccess</room>
     <room>rooms\roomGameOverFailureDeaths</room>

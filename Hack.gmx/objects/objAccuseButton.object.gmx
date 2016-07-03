@@ -35,6 +35,8 @@ if(objGameControl.gameState == NORMALMODE) {
     with(objAccuseOverlay)
         instance_destroy();
 }
+
+audio_play_sound(sndClick, 1, false);
 </string>
           </argument>
         </arguments>
