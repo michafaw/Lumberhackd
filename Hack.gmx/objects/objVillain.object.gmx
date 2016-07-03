@@ -40,7 +40,7 @@ maximumWalkingDistanceX = 400;
 maximumWalkingDistanceY = 300;
 
 // Probability to kill someone you are passing
-killProbability = 0.3/room_speed;
+killProbability = 0.4/room_speed;
 killCoolDownTime = 3.0*room_speed;
 alarm[1] = killCoolDownTime;
 willKill = false;
@@ -70,7 +70,12 @@ marked = false;
             <kind>1</kind>
             <string>/// Enable kills now that cool down time is over
 
-willKill = true;
+if(objGameControl.gameState == ACCUSEMODE) {
+    // Keep from killing while in accuse mode
+    willKill = false;
+    alarm[1] = 10;
+} else
+    willKill = true;
 </string>
           </argument>
         </arguments>

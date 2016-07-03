@@ -11,15 +11,21 @@
     <sprite>sprites\sprLumberjackFrontIdle1</sprite>
     <sprite>sprites\sprLumberjackFront1</sprite>
     <sprite>sprites\sprLumberjackRight1</sprite>
+    <sprite>sprites\sprLumberjackLeft1</sprite>
     <sprite>sprites\sprLumberjackBack1</sprite>
     <sprite>sprites\sprSack</sprite>
     <sprite>sprites\sprTree1</sprite>
     <sprite>sprites\sprTreetop1</sprite>
     <sprite>sprites\sprCheckMark</sprite>
     <sprite>sprites\sprAccuseButton</sprite>
+    <sprite>sprites\sprAccuseOverlay</sprite>
+    <sprite>sprites\sprLumberhackdTitle</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgTitle</background>
+    <background>background\bgForestFloor</background>
+    <background>background\bgGameOverSuccess</background>
+    <background>background\bgGameOverFailure</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -41,20 +47,27 @@
     <object>objects\objTree</object>
     <object>objects\objGameControl</object>
     <object>objects\objTitleControl</object>
+    <object>objects\objGameOverControl</object>
     <object>objects\objAccuseButton</object>
+    <object>objects\objAccuseOverlay</object>
+    <object>objects\objLumberjackdTitle</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomTitle</room>
     <room>rooms\roomMain</room>
+    <room>rooms\roomGameOverSuccess</room>
+    <room>rooms\roomGameOverFailure</room>
   </rooms>
-  <constants number="7">
+  <constants number="9">
     <constant name="NOSTATE">0</constant>
     <constant name="IDLE">1</constant>
     <constant name="WALKING">2</constant>
     <constant name="TALKING">3</constant>
     <constant name="GAMEFIELDBASEDEPTH">-1000</constant>
-    <constant name="PLAYING">0</constant>
-    <constant name="GAMEOVER">1</constant>
+    <constant name="LUMBERJACKBASEDEPTH">-3000</constant>
+    <constant name="NORMALMODE">0</constant>
+    <constant name="ACCUSEMODE">1</constant>
+    <constant name="GAMEOVER">2</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

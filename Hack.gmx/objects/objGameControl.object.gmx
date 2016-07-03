@@ -26,9 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Set up initial game variables
-
-
-gameState = PLAYING;
+gameState = NORMALMODE;
 </string>
           </argument>
         </arguments>
@@ -56,13 +54,14 @@ var lumberjacksRemaining = 0;
 with(objLumberjack) {
     lumberjacksRemaining++;
 }
-MFLog("Lumberjacks remaining: " + string(lumberjacksRemaining));
+show_debug_message("Lumberjacks remaining: " + string(lumberjacksRemaining));
 
 if(lumberjacksRemaining &lt;= 0) {
-    
-    if(gameState == PLAYING) {
-        show_message("Game Over##No lumberjacks survived.");
+    if(gameState == NORMALMODE || gameState == ACCUSEMODE) {
+        show_debug_message("Game Over - Failure (All dead)");
+        //show_message("Game Over##No lumberjacks survived.");
         gameState = GAMEOVER;
+        room_goto(roomGameOverFailure);
     }
 }
 </string>

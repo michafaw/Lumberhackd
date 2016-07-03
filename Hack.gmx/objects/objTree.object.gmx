@@ -51,7 +51,7 @@
             <string>/// Draw tree trunk and tree
 
 draw_sprite_ext(sprTree1, 0, x, y, 1, 1, 0, c_white, 0.95);
-draw_sprite_ext(sprTreetop1, 0, x, y-40, 1, 1, 0, c_white, 0.8);
+draw_sprite_ext(sprTreetop1, 0, x, y-80, 1, 1, 0, c_white, 0.8);
 </string>
           </argument>
         </arguments>

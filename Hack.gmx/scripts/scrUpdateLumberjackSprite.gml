@@ -9,7 +9,6 @@ if(lumberjackNumber == 1) {
             sprite_index = sprLumberjackFrontIdle1;
         } else if(state == WALKING) {
             sprite_index = sprLumberjackRight1;
-            image_xscale = abs(image_xscale);
         }
     } else if(direction > 45 && direction < 135) {
          // Up
@@ -22,8 +21,7 @@ if(lumberjackNumber == 1) {
         if(state == IDLE) {
             sprite_index = sprLumberjackFrontIdle1;
         } else if(state == WALKING) {
-            sprite_index = sprLumberjackRight1;
-            image_xscale = -1 * abs(image_xscale);
+            sprite_index = sprLumberjackLeft1;
         }
     } else {
         // Down

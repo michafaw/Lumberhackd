@@ -36,7 +36,7 @@ scrUpdateDepth();
 
 // Cause lumber jacks to keep walking for x amount of time if they are near the sack
 causeAlert = true;
-alarm[1] = 0.5*room_speed;
+alarm[1] = 1.5*room_speed;
 </string>
           </argument>
         </arguments>
@@ -127,7 +127,7 @@ with(objVillain) {
 if(causeAlert)
     draw_sprite_ext(sprSack, 0, x, y, 1.0, 1.0, 0, c_white, 1.0);
 else
-    draw_sprite_ext(sprSack, 0, x, y, 1.0, 1.0, 0, c_gray, 1.0);
+    draw_sprite_ext(sprSack, 0, x, y, 1.0, 1.0, 0, $CCCCCC, 1.0);
 </string>
           </argument>
         </arguments>
