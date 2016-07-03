@@ -8,7 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\sprGrayBox</sprite>
     <sprite>sprites\sprRedBox</sprite>
-    <sprite>sprites\sprLumberjackIdle1</sprite>
+    <sprite>sprites\sprLumberjackFrontIdle1</sprite>
     <sprite>sprites\sprLumberjackFront1</sprite>
     <sprite>sprites\sprLumberjackRight1</sprite>
     <sprite>sprites\sprLumberjackBack1</sprite>
@@ -16,6 +16,7 @@
     <sprite>sprites\sprTree1</sprite>
     <sprite>sprites\sprTreetop1</sprite>
     <sprite>sprites\sprCheckMark</sprite>
+    <sprite>sprites\sprAccuseButton</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgTitle</background>
@@ -40,15 +41,17 @@
     <object>objects\objTree</object>
     <object>objects\objGameControl</object>
     <object>objects\objTitleControl</object>
+    <object>objects\objAccuseButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomTitle</room>
     <room>rooms\roomMain</room>
   </rooms>
-  <constants number="6">
-    <constant name="WALKING">0</constant>
+  <constants number="7">
+    <constant name="NOSTATE">0</constant>
     <constant name="IDLE">1</constant>
-    <constant name="TALKING">2</constant>
+    <constant name="WALKING">2</constant>
+    <constant name="TALKING">3</constant>
     <constant name="GAMEFIELDBASEDEPTH">-1000</constant>
     <constant name="PLAYING">0</constant>
     <constant name="GAMEOVER">1</constant>

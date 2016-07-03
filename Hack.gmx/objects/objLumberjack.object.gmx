@@ -30,8 +30,8 @@
 destX = 60;
 destY = 60;
 movementSpeed = 5;
-state = IDLE; // current state
-newState = IDLE; // state we are transitioning into
+state = NOSTATE; // current state
+newState = choose(IDLE, WALKING, WALKING); // state we are transitioning into
 alarm[0] = irandom(1.5*room_speed);
 
 minimumIdleTime = 0.5*room_speed;

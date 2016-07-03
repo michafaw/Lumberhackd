@@ -29,7 +29,7 @@ if(state != newState) {
     } else if(newState == IDLE) {
         alarm[0] = irandom(maximumIdleTime - minimumIdleTime) + minimumIdleTime;
         sprite_index = 12;
-        image_speed = 0;
+        image_speed = (random(2.0) + 9.0)/room_speed;
     }
     
     

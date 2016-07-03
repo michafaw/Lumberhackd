@@ -30,8 +30,8 @@
 destX = 60;
 destY = 60;
 movementSpeed = 5;
-state = WALKING; // current state
-newState = WALKING; // state we are transitioning into
+state = NOSTATE; // current state
+newState = IDLE; // state we are transitioning into
 
 minimumIdleTime = 0.5*room_speed;
 maximumIdleTime = 1.5*room_speed;
