@@ -30,7 +30,8 @@
     <background>background\bgTitle</background>
     <background>background\bgForestFloor</background>
     <background>background\bgGameOverSuccess</background>
-    <background>background\bgGameOverFailure</background>
+    <background>background\bgGameOverFailureDeaths</background>
+    <background>background\bgGameOverFailureStrikes</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -63,7 +64,8 @@
     <room>rooms\roomTitle</room>
     <room>rooms\roomMain</room>
     <room>rooms\roomGameOverSuccess</room>
-    <room>rooms\roomGameOverFailure</room>
+    <room>rooms\roomGameOverFailureDeaths</room>
+    <room>rooms\roomGameOverFailureStrikes</room>
   </rooms>
   <constants number="9">
     <constant name="NOSTATE">0</constant>

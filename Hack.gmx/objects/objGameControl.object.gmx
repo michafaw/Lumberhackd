@@ -55,7 +55,7 @@ incorrectGuesses = 0;
 if(incorrectGuesses &gt;= 3) {
     show_debug_message("Game Over - Failure - 3 wrong accusations");
     gameState = GAMEOVER;
-    room_goto(roomGameOverFailure);
+    room_goto(roomGameOverFailureStrikes);
 }
 </string>
           </argument>
@@ -89,7 +89,7 @@ if(lumberjacksRemaining &lt;= 0) {
         show_debug_message("Game Over - Failure (All dead)");
         //show_message("Game Over##No lumberjacks survived.");
         gameState = GAMEOVER;
-        room_goto(roomGameOverFailure);
+        room_goto(roomGameOverFailureDeaths);
     }
 }
 </string>
