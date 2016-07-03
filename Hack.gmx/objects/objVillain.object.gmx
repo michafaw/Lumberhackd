@@ -329,7 +329,7 @@ if(objGameControl.gameState == ACCUSEMODE) {
           <argument>
             <kind>1</kind>
             <string>/// Draw sprite and marker with gray box behind
-draw_sprite(sprGrayBox, 0, x, y);
+//draw_sprite(sprGrayBox, 0, x, y);
 draw_self();
 if(marked)
     draw_sprite(sprCheckMark, 0, x, y-40);;

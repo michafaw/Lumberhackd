@@ -236,7 +236,9 @@ if(objGameControl.gameState == NORMALMODE)
             <kind>1</kind>
             <string>/// Handle incorrect accusations
 if(objGameControl.gameState == ACCUSEMODE) {
-    gameState = NORMALMODE;
+    objGameControl.gameState = NORMALMODE;
+    with(objAccuseOverlay)
+        instance_destroy();
     objGameControl.incorrectGuesses++;
 }
 </string>
